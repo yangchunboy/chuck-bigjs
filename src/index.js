@@ -5,35 +5,35 @@ class Big extends OldBig {
         super(number);
         this.number = number;
     }
-    // 支持累加
+    /// 支持累加
     plus() {
-        let addend = new OldBig(this.number);
+        let addend = this.number;
         for (let i = 0; i < arguments.length; i++) {
-            addend = addend.plus(arguments[i]);
+            addend = super.plus(arguments[i]);
         }
         return addend;
     }
     // 支持累减
     minus() {
-        let subtrahend = new OldBig(this.number);
+        let subtrahend = this.number;
         for (let i = 0; i < arguments.length; i++) {
-            subtrahend = subtrahend.minus(arguments[i]);
+            subtrahend = super.minus(arguments[i]);
         }
         return subtrahend;
     }
     // 支持累除
     div() {
-        let divisor = new OldBig(this.number);
+        let divisor = this.number;
         for (let i = 0; i < arguments.length; i++) {
-            divisor = divisor.div(arguments[i]);
+            divisor = super.div(arguments[i]);
         }
         return divisor;
     }
     // 支持累乘
     times() {
-        let multiplier = new OldBig(this.number);
+        let multiplier = this.number;
         for (let i = 0; i < arguments.length; i++) {
-            multiplier = multiplier.times(arguments[i]);
+            multiplier = super.times(arguments[i]);
         }
         return multiplier;
     }
